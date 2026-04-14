@@ -1,26 +1,26 @@
 public class Course {
-    private int course_id;
+    private int courseId;
     private String courseName;
 
-    Course(int course_id, String courseName )
-    {
-        this.course_id=course_id;
-        this.courseName=courseName;
+    // Constructor
+    public Course(int courseId, String courseName) {
+        this.courseId = courseId;
+        this.courseName = courseName;
     }
+
+    // Getters
+    public int getCourseId() {
+        return courseId;
+    }
+
     public String getCourseName() {
         return courseName;
     }
-    public int getCourse_id() {
-        return course_id;
+
+    // toString
+    @Override
+    public String toString() {
+        return "Course ID: " + courseId +
+               ", Course Name: " + courseName;
     }
-    public String toString()
-    {
-        return "Course ID : " +this.course_id+" Course Name " +this.courseName;
-    }
-    public static void main(String[] args) {
-        Course c1=new Course(22, "JAVA");
-        System.out.println(c1.toString());
-        
-    }
-    
 }
